@@ -10,11 +10,11 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0284c7',
-          dark: '#0369a1',
-          light: '#e0f2fe',
+          DEFAULT: '#2563eb', // blue-600
+          dark: '#1d4ed8',    // blue-700
+          light: '#dbeafe',   // blue-100
         },
-        secondary: '#0f172a',
+        secondary: '#0f172a', // slate-900
         accent: '#f59e0b',
         success: '#10b981',
       },
@@ -31,8 +31,8 @@ export default {
           fontFamily: theme('fontFamily.sans').join(', '),
           '-webkit-font-smoothing': 'antialiased',
           '-moz-osx-font-smoothing': 'grayscale',
-          color: theme('colors.secondary'),
-          backgroundColor: '#f8fafc', // slate-50/50 approx
+          color: '#0f172a',
+          backgroundColor: '#f8fafc',
         },
         'h1, h2, h3, h4, h5, h6': {
           fontFamily: theme('fontFamily.heading').join(', '),
@@ -41,10 +41,10 @@ export default {
       });
       addComponents({
         '.glass-effect': {
-          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          backgroundColor: 'rgba(255, 255, 255, 0.95)',
           backdropFilter: 'blur(12px)',
-          borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
-          boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+          borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
+          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)',
         },
         '.nav-link-hover': {
           position: 'relative',
@@ -55,7 +55,7 @@ export default {
             left: '0',
             height: '2px',
             width: '0',
-            backgroundColor: theme('colors.primary.DEFAULT'),
+            backgroundColor: '#2563eb',
             transition: 'all 0.3s ease',
           },
           '&:hover::after': {

@@ -27,16 +27,26 @@ const Navbar = () => {
     return (
         <nav className={`sticky top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
             <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`}>
-                <div className={`glass-effect rounded-2xl transition-all duration-300 shadow-lg ${scrolled ? 'shadow-primary/5' : 'shadow-black/5'}`}>
+                <div className={`transition-all duration-500 rounded-2xl shadow-lg ${
+                    scrolled 
+                    ? 'bg-blue-600 shadow-blue-600/20 py-1' 
+                    : 'glass-effect shadow-black/5'
+                }`}>
                     <div className="flex justify-between items-center h-16 md:h-20 px-4 md:px-8">
                         <div className="flex-shrink-0 flex items-center">
                             <Link to="/" className="flex items-center gap-3 group">
-                                <div className="bg-white p-1 rounded-lg shadow-sm border border-slate-100 group-hover:scale-105 transition-transform">
+                                <div className={`p-1 rounded-lg shadow-sm border transition-all duration-300 ${
+                                    scrolled ? 'bg-white border-transparent' : 'bg-white border-slate-100'
+                                } group-hover:scale-105`}>
                                     <img src={logo} alt="Best Health Care Logo" className="h-10 md:h-12 w-auto rounded-md" />
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className="font-extrabold text-xl md:text-2xl tracking-tighter text-secondary leading-none">BEST HEALTH</span>
-                                    <span className="text-[10px] md:text-[12px] font-bold text-primary tracking-[0.2em] uppercase leading-none mt-1">Care Centre</span>
+                                    <span className={`font-extrabold text-xl md:text-2xl tracking-tighter transition-colors duration-300 ${
+                                        scrolled ? 'text-white' : 'text-secondary'
+                                    } leading-none`}>BEST HEALTH</span>
+                                    <span className={`text-[10px] md:text-[12px] font-bold tracking-[0.2em] uppercase leading-none mt-1 transition-colors duration-300 ${
+                                        scrolled ? 'text-blue-100' : 'text-blue-600'
+                                    }`}>Care Centre</span>
                                 </div>
                             </Link>
                         </div>
@@ -47,9 +57,13 @@ const Navbar = () => {
                                 <Link
                                     key={link.name}
                                     to={link.path}
-                                    className={`relative py-2 text-[15px] font-semibold transition-all duration-300 hover:text-primary ${location.pathname === link.path 
-                                        ? 'text-primary after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-primary' 
-                                        : 'text-slate-600 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full'
+                                    className={`relative py-2 text-[15px] font-semibold transition-all duration-300 ${
+                                        scrolled 
+                                        ? `hover:text-blue-100 ${location.pathname === link.path ? 'text-white' : 'text-blue-50/80'}`
+                                        : `hover:text-blue-600 ${location.pathname === link.path ? 'text-blue-600' : 'text-slate-600'}`
+                                    } ${location.pathname === link.path 
+                                        ? `after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full ${scrolled ? 'after:bg-white' : 'after:bg-blue-600'}` 
+                                        : `after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 ${scrolled ? 'after:bg-white' : 'after:bg-blue-600'} after:transition-all hover:after:w-full`
                                     }`}
                                 >
                                     {link.name}
@@ -61,11 +75,12 @@ const Navbar = () => {
                         <div className="hidden md:flex flex-shrink-0 items-center">
                             <Link
                                 to="/contact"
-                                className="group relative overflow-hidden bg-primary text-white px-7 py-3 rounded-xl font-bold text-sm hover:bg-primary-dark transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2"
+                                className={`group relative overflow-hidden px-7 py-3 rounded-xl font-bold text-sm transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2 ${
+                                    scrolled ? 'bg-white text-blue-600 hover:bg-blue-50' : 'bg-blue-600 text-white hover:bg-blue-700'
+                                }`}
                             >
                                 <span className="relative z-10">Book Appointment</span>
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform relative z-10" />
-                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                             </Link>
                         </div>
 
@@ -73,7 +88,9 @@ const Navbar = () => {
                         <div className="lg:hidden flex items-center">
                             <button
                                 onClick={() => setIsOpen(true)}
-                                className="bg-slate-50 p-2 rounded-lg text-slate-600 hover:text-primary hover:bg-primary/5 transition-all focus:outline-none"
+                                className={`p-2 rounded-lg transition-all focus:outline-none ${
+                                    scrolled ? 'bg-white/10 text-white hover:bg-white/20' : 'bg-slate-50 text-slate-600 hover:text-blue-600 hover:bg-blue-50'
+                                }`}
                             >
                                 <Menu className="h-6 w-6" />
                             </button>
@@ -111,7 +128,7 @@ const Navbar = () => {
                             to={link.path}
                             onClick={() => setIsOpen(false)}
                             className={`flex items-center justify-between px-4 py-4 rounded-xl font-bold transition-all ${location.pathname === link.path
-                                ? 'text-primary bg-primary/5'
+                                ? 'text-blue-600 bg-blue-50'
                                 : 'text-slate-600 hover:bg-slate-50'
                                 }`}
                         >
@@ -124,7 +141,7 @@ const Navbar = () => {
                     <Link
                         to="/contact"
                         onClick={() => setIsOpen(false)}
-                        className="flex items-center justify-center gap-2 w-full bg-primary text-white px-6 py-4 rounded-xl font-bold shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all"
+                        className="flex items-center justify-center gap-2 w-full bg-blue-600 text-white px-6 py-4 rounded-xl font-bold shadow-lg shadow-blue-600/20 hover:bg-blue-700 transition-all"
                     >
                         Book Appointment <ArrowRight className="w-5 h-5" />
                     </Link>
@@ -134,4 +151,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Navbar;
