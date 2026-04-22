@@ -21,21 +21,15 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
             >
-              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                </span>
-                World Class Physiotherapy
-              </div>
-              <h1 className="text-5xl md:text-6xl lg:text-8xl font-black text-secondary leading-[0.95] mb-6 tracking-tighter">
-                RECOVER <br /> <span className="text-primary italic">FASTER.</span> <br /> LIVE BETTER.
+           
+              <h1 className="text-5xl md:text-6xl lg:text-1xl text-blue-600 font-bold leading-[0.95] mb-6 tracking-tighter">
+                RECOVER <br /> <span className="text-primary">FASTER.</span> <br /> LIVE BETTER.
               </h1>
               <p className="text-lg md:text-xl text-slate-500 mb-10 max-w-xl leading-relaxed font-medium">
-                Expert rehabilitation and personalized care designed to help you regain mobility and return to the activities you love. Experience the <span className="text-primary font-bold">Best Health Care</span> difference.
+                Ensuring the better quality pain management and advanced physiotherapy involves a multidisciplinary, patient-centered approach that combines expert assessment, modern technology, and personalized rehablitation plans. brExpert rehabilitation and personalized care designed to help you regain mobility and return to the activities you love. Experience the <span className="text-primary font-bold">Best Health Care</span> difference.
               </p>
               <div className="flex flex-col sm:flex-row gap-5">
-                <Link to="/contact" className="group bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:bg-primary-dark transition-all flex items-center justify-center gap-3 shadow-2xl shadow-primary/30 hover:-translate-y-1">
+                <Link to="/contact" className="group bg-blue-600 text-white px-10 py-5 rounded-2xl font-bold hover:bg-blue-700 transition-all flex items-center justify-center gap-3 shadow-2xl shadow-blue-600/20 hover:-translate-y-1">
                   Book Appointment <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link to="/services" className="bg-white text-secondary border border-slate-200 px-10 py-5 rounded-2xl font-bold hover:bg-slate-50 transition-all flex items-center justify-center shadow-sm">
@@ -164,7 +158,7 @@ const Home = () => {
                   </li>
                 ))}
               </ul>
-              <Link to="/about" className="inline-flex items-center gap-2 bg-blue-700 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-600 transition">
+              <Link to="/about" className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-600/20">
                 Read More About Us <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
