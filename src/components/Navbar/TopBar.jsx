@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const TopBar = () => {
     return (
-        <div className="bg-[#0f172a] text-white/90 py-2.5 px-4 hidden md:block">
+        <div className="bg-[#0f172a] text-white py-2.5 px-4 hidden md:block">
             <div className="max-w-7xl mx-auto flex justify-between items-center text-[13px] font-medium tracking-wide">
                 <div className="flex items-center gap-6">
                     <div className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer group">
@@ -15,7 +15,7 @@ const TopBar = () => {
                     </div>
                 </div>
                 <div className="flex items-center gap-6">
-                    <div className="flex items-center gap-2 text-white/70">
+                    <div className="flex items-center gap-2 text-white">
                         <Clock className="w-4 h-4 text-blue-500" />
                         <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
                     </div>
