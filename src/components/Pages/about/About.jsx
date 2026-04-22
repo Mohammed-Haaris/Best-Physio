@@ -1,75 +1,144 @@
-import { CheckCircle, Users, Award, Clock } from 'lucide-react';
+import { CheckCircle, Users, Award, Clock, GraduationCap, Heart, Sparkles, Activity } from 'lucide-react';
+import { motion } from 'framer-motion';
+import doctorImg from '../../../assets/images/dr_charles.png';
 import aboutMainImg from '../../../assets/images/physio3.png';
 
 const About = () => {
+  const stats = [
+    { label: 'Happy Patients', value: '15k+', icon: <Users className="w-6 h-6" /> },
+    { label: 'Years Experience', value: '15+', icon: <Clock className="w-6 h-6" /> },
+    { label: 'Awards Won', value: '25+', icon: <Award className="w-6 h-6" /> },
+    { label: 'Specialized Methods', value: '40+', icon: <Activity className="w-6 h-6" /> },
+  ];
+
+  const values = [
+    { title: "Patient First", desc: "We prioritize your comfort and recovery goals above all else.", icon: <Heart /> },
+    { title: "Expert Care", desc: "Our team stays at the forefront of medical advancements.", icon: <GraduationCap /> },
+    { title: "Modern Tech", desc: "Equipped with the latest rehabilitation technology.", icon: <Sparkles /> },
+    { title: "Integrity", desc: "Honest, transparent, and evidence-based treatments.", icon: <CheckCircle /> }
+  ];
+
   return (
-    <div className="w-full">
-      {/* Page Header */}
-      <div className="bg-gray-50 py-20">
+    <div className="w-full bg-white">
+       <div className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">About Us</h1>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Dedicated to providing the highest standard of physiotherapy care since 2010.
+            Comprehensive therapeutic services designed to treat a wide range of conditions.
           </p>
         </div>
       </div>
+     
 
-      {/* Main Content */}
-      <section className="py-20">
+      {/* Doctor Profile Section */}
+      <section className="py-16 md:py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Your Health Is Our Top Priority
-              </h2>
-              <p className="text-gray-600 mb-6 text-lg">
-                At PhysioCare, our mission is to empower individuals to live pain-free and active lives. We believe in taking a comprehensive approach to healing, addressing not just the symptoms, but the root cause of your discomfort.
-              </p>
-              <p className="text-gray-600 mb-8 text-lg">
-                Our team of highly trained professionals works closely with every patient to develop customized treatment plans. We combine advanced techniques with compassionate care to ensure the best possible outcomes.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-primary/5 p-6 rounded-xl border border-primary/10">
-                  <p className="text-4xl font-bold text-primary mb-2">15k+</p>
-                  <p className="text-gray-700 font-medium">Happy Patients</p>
-                </div>
-                <div className="bg-primary/5 p-6 rounded-xl border border-primary/10">
-                  <p className="text-4xl font-bold text-primary mb-2">25+</p>
-                  <p className="text-gray-700 font-medium">Expert Therapists</p>
-                </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white ring-1 ring-slate-100 max-w-md mx-auto lg:mx-0">
+                <img src={doctorImg} alt="Lead Physiotherapist" className="w-full h-[400px] md:h-[550px] object-cover" />
               </div>
-            </div>
-            <div>
-              <img 
-                src={aboutMainImg} 
-                alt="Therapy session" 
-                className="rounded-3xl shadow-xl w-full h-[350px] md:h-[600px] object-cover"
-              />
-            </div>
+              <div className="absolute -bottom-4 -right-4 bg-blue-700 text-white p-6 rounded-2xl shadow-xl z-20 hidden md:block">
+                <p className="text-2xl font-black mb-0.5">Dr. Charles Niranjan</p>
+                <p className="text-blue-100 font-bold uppercase tracking-widest text-[10px]">Chief Physiotherapist - BPT, MPT</p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-blue-600 font-black uppercase tracking-widest text-xs mb-2 block">Meet Our Founder</span>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 leading-tight">
+                Dedicated To Restoring Your <span className="text-blue-600">Mobility</span>
+              </h2>
+              <p className="text-slate-600 mb-5 text-base leading-relaxed">
+                With over 15 years of clinical experience, <span className='text-blue-600 font-bold'>Dr. Charles Niranjan</span> has dedicated his career to helping patients overcome chronic pain and complex injuries. His approach combines traditional therapy with modern, evidence-based techniques.
+              </p>
+              <p className="text-slate-600 mb-8 text-base leading-relaxed">
+                Under his leadership, Best Health Care Centre has grown from a small clinic to a premier rehabilitation center, known for its personalized care and high success rates in treating neurological and orthopedic conditions.
+              </p>
+              
+              <div className="space-y-4 mb-10">
+                {['Gold Medalist in Neuro-Physiotherapy', 'Certified Advanced Dry Needling Specialist', 'Expert in Sports Injury Management'].map((skill, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="bg-blue-100 p-1 rounded-full">
+                      <CheckCircle className="w-5 h-5 text-blue-600" />
+                    </div>
+                    <span className="text-slate-700 font-bold">{skill}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Core Values */}
-      <section className="py-20 bg-gray-900 text-white">
+      {/* Stats Section */}
+      <section className="pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Values</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-lg">What drives us everyday to provide the best care.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { icon: <Users />, title: "Compassion" },
-              { icon: <Award />, title: "Excellence" },
-              { icon: <CheckCircle />, title: "Integrity" },
-              { icon: <Clock />, title: "Dedication" }
-            ].map((value, idx) => (
-              <div key={idx} className="text-center p-8 border border-gray-800 rounded-2xl bg-gray-800/50">
-                <div className="w-16 h-16 rounded-full bg-primary/20 text-primary flex items-center justify-center mx-auto mb-6">
-                  {value.icon}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+            {stats.map((stat, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="bg-slate-50 p-8 rounded-3xl border border-slate-100 text-center hover:bg-white hover:shadow-xl transition-all group"
+              >
+                <div className="bg-white w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm group-hover:scale-110 transition-transform text-blue-600">
+                  {stat.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-2">{value.title}</h3>
-              </div>
+                <h3 className="text-3xl font-black text-slate-900 mb-1">{stat.value}</h3>
+                <p className="text-slate-500 font-bold text-xs uppercase tracking-wider">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-16 md:py-20 bg-slate-900 text-white rounded-[3rem] mx-4 md:mx-8 mb-16 overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-full h-full opacity-5 pointer-events-none">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-black mb-4 tracking-tighter">OUR CORE <span className="text-blue-500 italic">VALUES</span></h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-base font-medium">The principles that guide our practice and ensure your successful recovery.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {values.map((value, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="p-6 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors"
+              >
+                <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center mb-4 shadow-lg shadow-blue-600/30">
+                  <div className="scale-90">{value.icon}</div>
+                </div>
+                <h3 className="text-lg font-bold mb-2">{value.title}</h3>
+                <p className="text-slate-400 text-sm font-medium leading-relaxed">{value.desc}</p>
+              </motion.div>
             ))}
           </div>
         </div>
