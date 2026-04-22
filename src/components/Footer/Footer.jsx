@@ -11,10 +11,11 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-2 mb-6">
               <img src={logo} alt="PhysioCare Logo" className="h-10 w-auto rounded-md" />
-              <span className="font-bold text-2xl">PhysioCare</span>
+              <span className="font-bold text-2xl">Best Health Care Centre</span>
             </Link>
             <p className="text-gray-400 mb-6">
-              Empowering your recovery through advanced physiotherapy techniques and personalized patient care. We help you get back to your active lifestyle.
+              Best Health Care Center - Cuddalore's trusted Physiotherapy Clinic with 10+ Years of Excellence.
+
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-colors">
