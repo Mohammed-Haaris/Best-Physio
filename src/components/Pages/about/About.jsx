@@ -24,10 +24,10 @@ const Counter = ({ target, suffix = "" }) => {
 
 const About = () => {
   const stats = [
-    { label: 'Happy Patients', value: '15k+', icon: <Users className="w-6 h-6" /> },
-    { label: 'Years Experience', value: '20+', icon: <Clock className="w-6 h-6" /> },
-    { label: 'Awards Won', value: '30+', icon: <Award className="w-6 h-6" /> },
-    { label: 'Specialized Methods', value: '40+', icon: <Activity className="w-6 h-6" /> },
+    { label: 'Happy Patients', value: 15, suffix: 'k+', icon: <Users className="w-6 h-6" /> },
+    { label: 'Years Experience', value: 20, suffix: '+', icon: <Clock className="w-6 h-6" /> },
+    { label: 'Awards Won', value: 30, suffix: '+', icon: <Award className="w-6 h-6" /> },
+    { label: 'Specialized Methods', value: 40, suffix: '+', icon: <Activity className="w-6 h-6" /> },
   ];
 
   const values = [
