@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Activity, UserPlus, HeartPulse, Stethoscope } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { GiShoulderArmor, GiKneeCap, GiArm, GiBiceps, GiHand, GiFootprint, GiLeg, GiSpineArrow, GiPelvisBone } from "react-icons/gi";
 
 import heroImg from '../../../assets/images/physio1.png';
 import aboutImg from '../../../assets/images/physio3.png';
+import glassBg from '../../../assets/images/glass_bg.png';
 
 const Home = () => {
   return (
@@ -13,7 +15,7 @@ const Home = () => {
         {/* Decorative Background Elements */}
         <div className="absolute top-0 right-0 w-1/3 h-2/3 bg-primary/5 rounded-bl-[100px] -z-10 blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-blue-100/20 rounded-tr-[100px] -z-10 blur-3xl"></div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -21,7 +23,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
             >
-           
+
               <h1 className="text-5xl md:text-6xl lg:text-1xl text-blue-600 font-bold leading-[0.95] mb-6 tracking-tighter">
                 RECOVER <br /> <span className="text-primary">FASTER.</span> <br /> LIVE BETTER.
               </h1>
@@ -36,12 +38,12 @@ const Home = () => {
                   Our Services
                 </Link>
               </div>
-              
+
               <div className="mt-12 flex items-center gap-6 border-t border-slate-100 pt-8">
                 <div className="flex -space-x-3">
                   {[1, 2, 3, 4].map((i) => (
                     <div key={i} className="w-12 h-12 rounded-full border-4 border-white bg-slate-200 overflow-hidden shadow-sm">
-                      <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="Patient" />
+                      <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="Patient" />
                     </div>
                   ))}
                   <div className="w-12 h-12 rounded-full border-4 border-white bg-primary text-white flex items-center justify-center text-xs font-bold shadow-sm">
@@ -54,7 +56,7 @@ const Home = () => {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, scale: 0.95, x: 20 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -68,9 +70,9 @@ const Home = () => {
                   className="w-full object-cover h-[400px] md:h-[600px] hover:scale-105 transition-transform duration-1000"
                 />
               </div>
-              
+
               {/* Floating Cards */}
-              <motion.div 
+              <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -bottom-10 -left-10 bg-white p-6 rounded-3xl shadow-2xl flex items-center gap-5 z-20 border border-slate-50 hidden md:flex"
@@ -84,7 +86,7 @@ const Home = () => {
                 </div>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                 className="absolute top-20 -right-8 bg-white/90 backdrop-blur-md p-5 rounded-2xl shadow-xl flex flex-col items-center gap-2 z-20 border border-white/50 hidden lg:flex"
@@ -126,6 +128,45 @@ const Home = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Need Attention Section */}
+      <section
+        className="py-28 relative bg-cover bg-center overflow-hidden"
+        style={{ backgroundImage: `url(${glassBg})` }}
+      >
+        <div className="absolute inset-0 bg-blue-50/70 backdrop-blur-sm z-0"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
+              Where Do You Need Attention?
+            </h2>
+            <p className="text-slate-600 text-lg leading-relaxed max-w-3xl mx-auto font-medium">
+              We understand that injuries and acute pain can happen unexpectedly. Our emergency physiotherapy services are designed to provide prompt and effective care to help you manage.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-2">
+            {[
+              { name: "Neck Pain", icon: <GiSpineArrow /> },
+              { name: "Shoulder Pain", icon: <GiShoulderArmor /> },
+              { name: "Hip Pain", icon: <GiPelvisBone /> },
+              { name: "Knee Pain", icon: <GiKneeCap /> },
+              { name: "Elbow Pain", icon: <GiArm /> },
+              { name: "Tricep Pain", icon: <GiBiceps /> },
+              { name: "Hand Pain", icon: <GiHand /> },
+              { name: "Foot Pain", icon: <GiFootprint /> },
+              { name: "Ankle Pain", icon: <GiLeg /> }
+            ].map((pain, idx) => (
+              <div key={idx} className="flex items-center gap-5 py-6 border-b border-blue-900/10 group cursor-pointer hover:border-blue-600 transition-colors">
+                <div className="w-12 h-12 flex items-center justify-center text-blue-600 bg-white rounded-2xl shadow-sm group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all text-3xl">
+                  {pain.icon}
+                </div>
+                <span className="text-slate-800 font-bold text-xl group-hover:text-blue-700 transition-colors">{pain.name}</span>
+              </div>
             ))}
           </div>
         </div>

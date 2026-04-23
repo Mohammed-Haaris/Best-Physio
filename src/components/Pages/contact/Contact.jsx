@@ -31,7 +31,7 @@ const Contact = () => {
 
   return (
     <div className="w-full bg-white">
-       <div className="bg-gray-50 py-20">
+      <div className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Contact Us</h1>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
@@ -39,6 +39,25 @@ const Contact = () => {
           </p>
         </div>
       </div>
+
+      {/* Map Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-8 relative z-10 w-full overflow-hidden">
+        <div className="p-3 md:p-5 bg-gradient-to-br from-blue-500 to-blue-700 rounded-[2.5rem] shadow-2xl shadow-blue-600/30">
+          <div className="w-full h-80 md:h-[500px] rounded-[1.8rem] overflow-hidden bg-white translate-z-0">
+            <iframe
+              title="Clinic Location"
+              src="https://www.google.com/maps?q=Best+care+physiotherapy+clinic+Dr.charles+Niranjan,+Cuddalore,+Tamil+Nadu+607001&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="grayscale-[0.2] contrast-125 hover:grayscale-0 transition-all duration-700"
+            ></iframe>
+          </div>
+        </div>
+      </section>
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
@@ -49,7 +68,7 @@ const Contact = () => {
                 <span className="text-blue-600 font-black uppercase tracking-widest text-lg mb-2 block">Contact Details</span>
                 <h2 className="text-4xl font-black text-slate-900 tracking-tight">Visit Our Clinic</h2>
               </div>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
                 {contactInfo.map((info, idx) => (
                   <motion.div
@@ -78,18 +97,18 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="lg:col-span-7">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 className="bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl shadow-blue-600/10 border border-slate-100 relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 p-8 opacity-5">
-                    <MessageSquare className="w-32 h-32 text-blue-600" />
+                  <MessageSquare className="w-32 h-32 text-blue-600" />
                 </div>
-                
+
                 <h2 className="text-3xl font-black text-slate-900 mb-8 tracking-tight">Book An <span className="text-blue-600">Appointment</span></h2>
-                
+
                 <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
@@ -124,7 +143,7 @@ const Contact = () => {
                   </div>
 
                   <button type="submit" className="group w-full bg-blue-600 text-white font-medium py-5 rounded-2xl hover:bg-blue-700 transition-all text-lg shadow-xl shadow-blue-600/20 flex items-center justify-center gap-3 active:scale-[0.98]">
-                    Send Request 
+                    Send Request
                     <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </button>
                 </form>
@@ -134,15 +153,16 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Bottom Trust Section */}
       <div className="bg-slate-50 py-12 border-t border-slate-100">
-          <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-12 opacity-50">
-                <div className="flex items-center gap-2 font-bold text-slate-400"><CheckCircle2 className="w-5 h-5" /> Verified Medical Staff</div>
-                <div className="flex items-center gap-2 font-bold text-slate-400"><CheckCircle2 className="w-5 h-5" /> Advanced Equipment</div>
-                <div className="flex items-center gap-2 font-bold text-slate-400"><CheckCircle2 className="w-5 h-5" /> Trusted by 15k+ Patients</div>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-12 opacity-50">
+          <div className="flex items-center gap-2 font-bold text-slate-400"><CheckCircle2 className="w-5 h-5" /> Verified Medical Staff</div>
+          <div className="flex items-center gap-2 font-bold text-slate-400"><CheckCircle2 className="w-5 h-5" /> Advanced Equipment</div>
+          <div className="flex items-center gap-2 font-bold text-slate-400"><CheckCircle2 className="w-5 h-5" /> Trusted by 15k+ Patients</div>
+        </div>
       </div>
+
     </div>
   );
 };
