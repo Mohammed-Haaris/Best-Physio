@@ -25,16 +25,16 @@ const Home = () => {
             >
 
               <h1 className="text-5xl md:text-6xl lg:text-1xl text-blue-600 font-bold leading-[0.95] mb-6 tracking-tighter">
-                RECOVER <br /> <span className="text-primary">FASTER.</span> <br /> LIVE BETTER.
+                RECOVER <br /> <span className="text-primary">FASTER</span> <br /> LIVE BETTER
               </h1>
               <p className="text-lg md:text-xl text-slate-500 mb-10 max-w-xl leading-relaxed font-medium">
-                Ensuring the better quality pain management and advanced physiotherapy involves a multidisciplinary, patient-centered approach that combines expert assessment, modern technology, and personalized rehablitation plans. brExpert rehabilitation and personalized care designed to help you regain mobility and return to the activities you love. Experience the <span className="text-primary font-bold">Best Health Care</span> difference.
+                Ensuring the better quality pain management and advanced physiotherapy involves a multidisciplinary, patient-centered approach that combines expert assessment, modern technology, and personalized rehablitation plans. Expert rehabilitation and personalized care designed to help you regain mobility and return to the activities you love. Experience the <span className="text-primary font-bold">Best Health Care</span> difference.
               </p>
               <div className="flex flex-col sm:flex-row gap-5">
                 <Link to="/contact" className="group bg-blue-600 text-white px-10 py-5 rounded-2xl font-bold hover:bg-blue-700 transition-all flex items-center justify-center gap-3 shadow-2xl shadow-blue-600/20 hover:-translate-y-1">
                   Book Appointment <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link to="/services" className="bg-white text-secondary border border-slate-200 px-10 py-5 rounded-2xl font-bold hover:bg-slate-50 transition-all flex items-center justify-center shadow-sm">
+                <Link to="/services" className="bg-white text-secondary border border-slate-200 px-10 py-5 rounded-2xl font-bold hover:bg-blue-600 hover:text-white transition-all flex items-center justify-center shadow-sm">
                   Our Services
                 </Link>
               </div>
@@ -81,7 +81,7 @@ const Home = () => {
                   <Activity className="w-10 h-10 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-black text-secondary text-2xl">15+ Years</h4>
+                  <h4 className="font-black text-secondary text-2xl">20+ Years</h4>
                   <p className="text-slate-500 font-bold text-sm uppercase tracking-widest">Experience</p>
                 </div>
               </motion.div>
@@ -110,9 +110,9 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: <UserPlus className="w-10 h-10 text-primary" />, title: "Expert Therapists", desc: "Our team of certified professionals is dedicated to your health." },
-              { icon: <HeartPulse className="w-10 h-10 text-primary" />, title: "Personalized Care", desc: "Treatment plans tailored specifically to your unique needs and goals." },
-              { icon: <Stethoscope className="w-10 h-10 text-primary" />, title: "Modern Facilities", desc: "Equipped with state-of-the-art technology for advanced treatment." }
+              { icon: UserPlus, title: "Expert Therapists", desc: "Our team of certified professionals is dedicated to your health." },
+              { icon: HeartPulse, title: "Personalized Care", desc: "Treatment plans tailored specifically to your unique needs and goals." },
+              { icon: Stethoscope, title: "Modern Facilities", desc: "Equipped with state-of-the-art technology for advanced treatment." }
             ].map((feature, idx) => (
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -120,13 +120,13 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
                 key={idx}
-                className="bg-gray-50 p-8 rounded-2xl hover:shadow-xl transition duration-300 border border-gray-100"
+                className="group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:shadow-blue-600/20 hover:bg-blue-600 transition-all duration-500 border border-slate-100 hover:border-blue-600 hover:-translate-y-2"
               >
-                <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-sm">
-                  {feature.icon}
+                <div className="bg-blue-50 w-20 h-20 rounded-3xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-white/20 group-hover:scale-110 transition-all duration-500">
+                  <feature.icon className="w-10 h-10 text-blue-600 group-hover:text-white transition-colors duration-500" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.desc}</p>
+                <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-white transition-colors duration-500">{feature.title}</h3>
+                <p className="text-slate-500 font-medium leading-relaxed group-hover:text-blue-50 transition-colors duration-500">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -184,9 +184,8 @@ const Home = () => {
               </div>
             </div>
             <div>
-              <span className="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">About Us</span>
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                We Are Dedicated To Your Health And Recovery
+                We Are Dedicated To Your Health And Recovery in <span className='text-blue-600'>pain management</span>
               </h2>
               <p className="text-gray-600 mb-8 text-lg">
                 <span className="text-primary font-bold">Best Health Care Clinic</span> is a leading rehabilitation clinic offering comprehensive therapeutic services. Our evidence-based approach ensures that you receive the most effective treatments available today.

@@ -41,10 +41,10 @@ const Navbar = () => {
                                     <img src={logo} alt="Best Health Care Logo" className="h-10 md:h-12 w-auto rounded-md" />
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className={`font-extrabold text-xl md:text-2xl tracking-tighter transition-colors duration-300 ${
+                                    <span className={`font-extrabold text-lg md:text-2xl tracking-tighter transition-colors duration-300 ${
                                         scrolled ? 'text-white' : 'text-secondary'
                                     } leading-none`}>BEST HEALTH</span>
-                                    <span className={`text-[10px] md:text-[12px] font-bold tracking-[0.2em] uppercase leading-none mt-1 transition-colors duration-300 ${
+                                    <span className={`text-[9px] md:text-[12px] font-bold tracking-[0.2em] uppercase leading-none mt-1 transition-colors duration-300 ${
                                         scrolled ? 'text-blue-100' : 'text-blue-600'
                                     }`}>Care Centre</span>
                                 </div>

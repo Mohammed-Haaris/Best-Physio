@@ -24,10 +24,10 @@ const Counter = ({ target, suffix = "" }) => {
 
 const About = () => {
   const stats = [
-    { label: 'Happy Patients', value: 15, suffix: 'k+', icon: <Users className="w-6 h-6" /> },
-    { label: 'Years Experience', value: 15, suffix: '+', icon: <Clock className="w-6 h-6" /> },
-    { label: 'Awards Won', value: 25, suffix: '+', icon: <Award className="w-6 h-6" /> },
-    { label: 'Specialized Methods', value: 40, suffix: '+', icon: <Activity className="w-6 h-6" /> },
+    { label: 'Happy Patients', value: '15k+', icon: <Users className="w-6 h-6" /> },
+    { label: 'Years Experience', value: '20+', icon: <Clock className="w-6 h-6" /> },
+    { label: 'Awards Won', value: '30+', icon: <Award className="w-6 h-6" /> },
+    { label: 'Specialized Methods', value: '40+', icon: <Activity className="w-6 h-6" /> },
   ];
 
   const values = [
@@ -65,12 +65,41 @@ const About = () => {
 
   return (
     <div className="w-full bg-white">
-      <div className="bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">About Us</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Comprehensive therapeutic services designed to treat a wide range of conditions.
-          </p>
+      {/* Page Header */}
+      <div className="relative py-16 md:py-20 overflow-hidden">
+        {/* Background Image & Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={aboutMainImg} 
+            alt="About Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-blue-800/85 backdrop-blur-[2px]"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <motion.span 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-blue-200 font-bold uppercase tracking-[0.2em] text-[10px] mb-3 block"
+          >
+            Our Story
+          </motion.span>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight"
+          >
+            About <span className="text-blue-400">Us</span>
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-blue-50/80 max-w-xl mx-auto text-base md:text-lg font-medium"
+          >
+            Transforming quality and advanced treatments center for your holistic recovery.
+          </motion.p>
         </div>
       </div>
 
@@ -88,9 +117,9 @@ const About = () => {
               <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white ring-1 ring-slate-100 max-w-md mx-auto lg:mx-0">
                 <img src={doctorImg} alt="Lead Physiotherapist" className="w-full h-[400px] md:h-[550px] object-cover" />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-blue-700 text-white p-6 rounded-2xl shadow-xl z-20 hidden md:block">
-                <p className="text-2xl font-black mb-0.5">Dr. Charles Niranjan</p>
-                <p className="text-blue-100 font-bold uppercase tracking-widest text-[10px]">Chief Physiotherapist - BPT, MPT</p>
+              <div className="absolute -bottom-4 -right-4 bg-blue-700 text-white p-6 rounded-2xl shadow-xl z-20 hidden md:block mt-9">
+                <p className="text-2xl font-black mb-0.5">Lion Dr I.P.Charles Niranjan PH.d Neurology</p>
+                <p className="text-blue-100 font-bold uppercase tracking-widest text-[20px]">C.M.T, F.M.T, F.N.R, Consultant Clinician</p>
               </div>
             </motion.div>
 
@@ -99,12 +128,12 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-blue-600 font-black uppercase tracking-widest text-xs mb-2 block">Meet Our Founder</span>
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 leading-tight">
-                Dedicated To Restoring Your <span className="text-blue-600">Mobility</span>
+              <span className="text-blue-600 font-bold  uppercase tracking-widest text-xs mb-2 block">Meet Our Founder</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+               Dedicated to provide the highest standard of <span className='text-blue-600'>Pain Management</span> and <span className="text-blue-600">Physiotherapy</span>
               </h2>
               <p className="text-slate-600 mb-5 text-base leading-relaxed">
-                With over 15 years of clinical experience, <span className='text-blue-600 font-bold'>Dr. Charles Niranjan</span> has dedicated his career to helping patients overcome chronic pain and complex injuries. His approach combines traditional therapy with modern, evidence-based techniques.
+                With over 20+ years of clinical experience, <span className='text-blue-600 font-bold'>Dr. Charles Niranjan</span> has dedicated his career to helping patients overcome chronic pain and complex injuries. His approach combines traditional therapy with modern, evidence-based techniques.
               </p>
               <p className="text-slate-600 mb-8 text-base leading-relaxed">
                 Under his leadership, Best Health Care Centre has grown from a small clinic to a premier rehabilitation center, known for its personalized care and high success rates in treating neurological and orthopedic conditions.
