@@ -28,7 +28,7 @@ const Home = () => {
                 RECOVER <br /> <span className="text-primary">FASTER</span> <br /> LIVE BETTER
               </h1>
               <p className="text-lg md:text-xl text-slate-500 mb-10 max-w-xl leading-relaxed font-medium">
-                Ensuring the better quality pain management and advanced physiotherapy involves a multidisciplinary, patient-centered approach that combines expert assessment, modern technology, and personalized rehablitation plans. Expert rehabilitation and personalized care designed to help you regain mobility and return to the activities you love. Experience the <span className="text-primary font-bold">Best Health Care</span> difference.
+                Ensuring the better quality pain management and advanced physiotherapy involves expertise assessment and diagnosis providing best treatment using modern medical technology, innovating new research  methods which  brings maximum recovery to the patients with acute and chronic ortho ,neuro,musculo-skeletal and sports injury problems  with in short period of time with  affordable cost.
               </p>
               <div className="flex flex-col sm:flex-row gap-5">
                 <Link to="/contact" className="group bg-blue-600 text-white px-10 py-5 rounded-2xl font-bold hover:bg-blue-700 transition-all flex items-center justify-center gap-3 shadow-2xl shadow-blue-600/20 hover:-translate-y-1">

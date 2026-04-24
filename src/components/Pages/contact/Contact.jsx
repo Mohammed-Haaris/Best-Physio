@@ -2,6 +2,7 @@ import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, MessageSquare } from 'l
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import bgContact from '../../../assets/images/physio2.png';
+import googleQR from '../../../assets/images/google_qr.jpeg';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,19 +25,19 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    const phoneNumber = "7904321745"; // Doctor's WhatsApp number
+
+    const phoneNumber = "9566933355"; // Doctor's WhatsApp number
     const message = `*New Appointment Request*\n\n` +
-                    `*Name:* ${formData.firstName} ${formData.lastName}\n` +
-                    `*Email:* ${formData.email}\n` +
-                    `*Service:* ${formData.service}\n` +
-                    `*Preferred Date:* ${formData.date}\n` +
-                    `*Preferred Time:* ${formData.time}\n` +
-                    `*Message:* ${formData.message}`;
-    
+      `*Name:* ${formData.firstName} ${formData.lastName}\n` +
+      `*Email:* ${formData.email}\n` +
+      `*Service:* ${formData.service}\n` +
+      `*Preferred Date:* ${formData.date}\n` +
+      `*Preferred Time:* ${formData.time}\n` +
+      `*Message:* ${formData.message}`;
+
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    
+
     // Redirect to WhatsApp
     window.location.href = whatsappUrl;
   };
@@ -49,8 +50,14 @@ const Contact = () => {
       color: "bg-blue-600 text-white"
     },
     {
-      title: "Phone Number",
+      title: "Doctor's Contact Number",
       details: ["+91 9566933355"],
+      icon: <Phone className="w-6 h-6" />,
+      color: "bg-blue-600 text-white"
+    },
+    {
+      title: "Clinic Phone Number",
+      details: ["+91 9360265020"],
       icon: <Phone className="w-6 h-6" />,
       color: "bg-blue-600 text-white"
     },
@@ -62,7 +69,7 @@ const Contact = () => {
     },
     {
       title: "Working Hours",
-      details: ["Mon - Fri: 8:00 AM - 8:00 PM", "Sat - Sun: 9:00 AM - 4:00 PM"],
+      details: ["Mon - Sat: 9:30 AM - 9:00 PM", "Sun - Closed"],
       icon: <Clock className="w-6 h-6" />,
       color: "bg-blue-600 text-white"
     }
@@ -74,30 +81,30 @@ const Contact = () => {
       <div className="relative py-16 md:py-20 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src={bgContact} 
-            alt="Contact Background" 
+          <img
+            src={bgContact}
+            alt="Contact Background"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-blue-800/85 backdrop-blur-[2px]"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-blue-200 font-bold uppercase tracking-[0.2em] text-[10px] mb-3 block"
           >
             Get In Touch
           </motion.span>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight"
           >
             Contact <span className="text-blue-400">Us</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -125,6 +132,30 @@ const Contact = () => {
             ></iframe>
           </div>
         </div>
+
+        {/* QR Code Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12"
+        >
+          <div className="p-3 md:p-5 bg-gradient-to-br from-blue-500 to-blue-700 rounded-[2.5rem] shadow-2xl shadow-blue-600/30">
+            <div className="w-full py-12 md:py-20 rounded-[1.8rem] overflow-hidden bg-white flex flex-col items-center justify-center translate-z-0">
+               <div className="group relative p-2 bg-white transition-all duration-500 hover:scale-105">
+                <img
+                  src={googleQR}
+                  alt="Google Maps QR Code"
+                  className="w-48 h-48 md:w-72 md:h-72 object-contain"
+                />
+              </div>
+              <div className="mt-8 text-center px-4">
+                <span className="text-blue-600 font-black uppercase tracking-[0.2em] text-[10px] block mb-1">Quick Location Access</span>
+                <p className="text-slate-900 font-bold text-lg md:text-xl">Scan this QR code to instantly open our clinic in Google Maps</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </section>
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -176,51 +207,51 @@ const Contact = () => {
                 </div>
 
                 <h2 className="text-3xl font-black text-slate-900 mb-8 tracking-tight">Book An <span className="text-blue-600">Appointment</span></h2>
-                
+
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-xs font-black text-slate-400 uppercase tracking-widest ml-1">First Name</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleChange}
                         required
-                        className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-transparent focus:bg-white focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 outline-none transition-all font-semibold text-slate-700" 
-                        placeholder="John" 
+                        className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-transparent focus:bg-white focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 outline-none transition-all font-semibold text-slate-700"
+                        placeholder="John"
                       />
                     </div>
                     <div className="space-y-2">
                       <label className="text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Last Name</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleChange}
                         required
-                        className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-transparent focus:bg-white focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 outline-none transition-all font-semibold text-slate-700" 
-                        placeholder="Doe" 
+                        className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-transparent focus:bg-white focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 outline-none transition-all font-semibold text-slate-700"
+                        placeholder="Doe"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <label className="text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Email Address</label>
-                    <input 
-                      type="email" 
+                    <input
+                      type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-transparent focus:bg-white focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 outline-none transition-all font-semibold text-slate-700" 
-                      placeholder="john@example.com" 
+                      className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-transparent focus:bg-white focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 outline-none transition-all font-semibold text-slate-700"
+                      placeholder="john@example.com"
                     />
                   </div>
 
                   <div className="space-y-2">
                     <label className="text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Service Needed</label>
-                    <select 
+                    <select
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
@@ -238,43 +269,43 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Preferred Date</label>
-                      <input 
-                        type="date" 
+                      <input
+                        type="date"
                         name="date"
                         value={formData.date}
                         onChange={handleChange}
                         required
-                        className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-transparent focus:bg-white focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 outline-none transition-all font-semibold text-slate-700" 
+                        className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-transparent focus:bg-white focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 outline-none transition-all font-semibold text-slate-700"
                       />
                     </div>
                     <div className="space-y-2">
                       <label className="text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Preferred Time</label>
-                      <input 
-                        type="time" 
+                      <input
+                        type="time"
                         name="time"
                         value={formData.time}
                         onChange={handleChange}
                         required
-                        className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-transparent focus:bg-white focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 outline-none transition-all font-semibold text-slate-700" 
+                        className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-transparent focus:bg-white focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 outline-none transition-all font-semibold text-slate-700"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <label className="text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Your Message</label>
-                    <textarea 
+                    <textarea
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      rows="4" 
-                      className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-transparent focus:bg-white focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 outline-none transition-all font-semibold text-slate-700 resize-none" 
+                      rows="4"
+                      className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-transparent focus:bg-white focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 outline-none transition-all font-semibold text-slate-700 resize-none"
                       placeholder="Tell us about your condition..."
                     ></textarea>
                   </div>
 
                   <button type="submit" className="group w-full bg-blue-600 text-white py-5 rounded-2xl hover:bg-blue-700 transition-all text-lg shadow-xl shadow-blue-600/20 flex items-center justify-center gap-3 active:scale-[0.98]">
-                    Send Request 
+                    Send Request
                     <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </button>
                 </form>

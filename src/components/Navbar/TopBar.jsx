@@ -7,7 +7,7 @@ const TopBar = () => {
                 <div className="flex items-center gap-6">
                     <div className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer group">
                         <Phone className="w-4 h-4 text-blue-500" />
-                        <span>+91 9566933355</span>
+                        <span>+91 9360265020</span>
                     </div>
                     <div className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer group">
                         <Mail className="w-4 h-4 text-blue-500" />
@@ -17,7 +17,7 @@ const TopBar = () => {
                 <div className="flex items-center gap-6">
                     <div className="flex items-center gap-2 text-white">
                         <Clock className="w-4 h-4 text-blue-500" />
-                        <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
+                        <span>Mon - Sat: 9:30 AM - 9:00 PM</span>
                     </div>
                     <div className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer group">
                         <MapPin className="w-4 h-4 text-blue-500" />

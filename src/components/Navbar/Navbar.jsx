@@ -27,26 +27,24 @@ const Navbar = () => {
     return (
         <nav className={`sticky top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
             <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`}>
-                <div className={`transition-all duration-500 rounded-2xl shadow-lg ${
-                    scrolled 
-                    ? 'bg-blue-600 shadow-blue-600/20 py-1' 
+                <div className={`transition-all duration-500 rounded-2xl shadow-lg ${scrolled
+                    ? 'bg-blue-600 shadow-blue-600/20 py-1'
                     : 'glass-effect shadow-black/5'
-                }`}>
+                    }`}>
                     <div className="flex justify-between items-center h-16 md:h-20 px-4 md:px-8">
                         <div className="flex-shrink-0 flex items-center">
                             <Link to="/" className="flex items-center gap-3 group">
-                                <div className={`p-1 rounded-lg shadow-sm border transition-all duration-300 ${
-                                    scrolled ? 'bg-white border-transparent' : 'bg-white border-slate-100'
-                                } group-hover:scale-105`}>
+                                <div className={`p-1 rounded-lg shadow-sm border transition-all duration-300 ${scrolled ? 'bg-white border-transparent' : 'bg-white border-slate-100'
+                                    } group-hover:scale-105`}>
                                     <img src={logo} alt="Best Health Care Logo" className="h-10 md:h-12 w-auto rounded-md" />
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className={`font-extrabold text-lg md:text-2xl tracking-tighter transition-colors duration-300 ${
-                                        scrolled ? 'text-white' : 'text-secondary'
-                                    } leading-none`}>BEST HEALTH</span>
-                                    <span className={`text-[9px] md:text-[12px] font-bold tracking-[0.2em] uppercase leading-none mt-1 transition-colors duration-300 ${
-                                        scrolled ? 'text-blue-100' : 'text-blue-600'
-                                    }`}>Care Centre</span>
+                                    <span className={`font-extrabold text-xl md:text-2xl tracking-tighter transition-colors duration-300 ${scrolled ? 'text-white' : 'text-secondary'
+                                        } leading-none`}>BEST HEALTH</span>
+                                    <span className={`text-[10px] md:text-[20px] font-bold tracking-[0.2em] uppercase leading-none mt-1 transition-colors duration-300 ${scrolled ? 'text-blue-100' : 'text-blue-600'
+                                        }`}>Care Centre</span>
+                                    <span className={`text-[8px] md:text-[10px] font-black tracking-[0.3em] uppercase leading-none mt-1.5 transition-colors duration-300 ${scrolled ? 'text-blue-200' : 'text-slate-400'
+                                        }`}>Since 2003</span>
                                 </div>
                             </Link>
                         </div>
@@ -57,14 +55,13 @@ const Navbar = () => {
                                 <Link
                                     key={link.name}
                                     to={link.path}
-                                    className={`relative py-2 text-[15px] font-semibold transition-all duration-300 ${
-                                        scrolled 
+                                    className={`relative py-2 text-[15px] font-semibold transition-all duration-300 ${scrolled
                                         ? `hover:text-blue-100 ${location.pathname === link.path ? 'text-white' : 'text-blue-50/80'}`
                                         : `hover:text-blue-600 ${location.pathname === link.path ? 'text-blue-600' : 'text-slate-600'}`
-                                    } ${location.pathname === link.path 
-                                        ? `after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full ${scrolled ? 'after:bg-white' : 'after:bg-blue-600'}` 
-                                        : `after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 ${scrolled ? 'after:bg-white' : 'after:bg-blue-600'} after:transition-all hover:after:w-full`
-                                    }`}
+                                        } ${location.pathname === link.path
+                                            ? `after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full ${scrolled ? 'after:bg-white' : 'after:bg-blue-600'}`
+                                            : `after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 ${scrolled ? 'after:bg-white' : 'after:bg-blue-600'} after:transition-all hover:after:w-full`
+                                        }`}
                                 >
                                     {link.name}
                                 </Link>
@@ -75,9 +72,8 @@ const Navbar = () => {
                         <div className="hidden md:flex flex-shrink-0 items-center">
                             <Link
                                 to="/contact"
-                                className={`group relative overflow-hidden px-7 py-3 rounded-xl font-bold text-sm transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2 ${
-                                    scrolled ? 'bg-white text-blue-600 hover:bg-blue-50' : 'bg-blue-600 text-white hover:bg-blue-700'
-                                }`}
+                                className={`group relative overflow-hidden px-7 py-3 rounded-xl font-bold text-sm transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2 ${scrolled ? 'bg-white text-blue-600 hover:bg-blue-50' : 'bg-blue-600 text-white hover:bg-blue-700'
+                                    }`}
                             >
                                 <span className="relative z-10">Book Appointment</span>
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform relative z-10" />
@@ -88,9 +84,8 @@ const Navbar = () => {
                         <div className="lg:hidden flex items-center">
                             <button
                                 onClick={() => setIsOpen(true)}
-                                className={`p-2 rounded-lg transition-all focus:outline-none ${
-                                    scrolled ? 'bg-white/10 text-white hover:bg-white/20' : 'bg-slate-50 text-slate-600 hover:text-blue-600 hover:bg-blue-50'
-                                }`}
+                                className={`p-2 rounded-lg transition-all focus:outline-none ${scrolled ? 'bg-white/10 text-white hover:bg-white/20' : 'bg-slate-50 text-slate-600 hover:text-blue-600 hover:bg-blue-50'
+                                    }`}
                             >
                                 <Menu className="h-6 w-6" />
                             </button>
@@ -101,8 +96,8 @@ const Navbar = () => {
 
             {/* Mobile Menu Backdrop */}
             {isOpen && (
-                <div 
-                    className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[60] lg:hidden transition-opacity" 
+                <div
+                    className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[60] lg:hidden transition-opacity"
                     onClick={() => setIsOpen(false)}
                 ></div>
             )}
