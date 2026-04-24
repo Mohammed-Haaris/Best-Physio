@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="font-bold text-2xl text-blue-700">Best Health Care Centre</span>
             </Link>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Best Health Care Center - Cuddalore's trusted Physiotherapy Clinic with 10+ Years of Excellence.
+              Best Health Care Center - Cuddalore's trusted Physiotherapy Clinic with 20+ Years of Excellence.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors shadow-sm">
@@ -44,17 +44,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-xl font-bold mb-6 text-gray-900">Our Services</h3>
-            <ul className="space-y-4">
-              <li className="text-gray-600 font-medium">Manual Therapy</li>
-              <li className="text-gray-600 font-medium">Sports Rehabilitation</li>
-              <li className="text-gray-600 font-medium">Post-Surgery Care</li>
-              <li className="text-gray-600 font-medium">Massage Therapy</li>
-            </ul>
-          </div>
-
+        
           {/* Contact Info */}
           <div>
             <h3 className="text-xl font-bold mb-6 text-gray-900">Contact Us</h3>
