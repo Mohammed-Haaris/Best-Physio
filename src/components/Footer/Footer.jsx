@@ -44,7 +44,7 @@ const Footer = () => {
             </ul>
           </div>
 
-
+        
           {/* Contact Info */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h3 className="text-xl font-bold mb-6 text-gray-900">Contact Us</h3>

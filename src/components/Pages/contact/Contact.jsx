@@ -25,8 +25,8 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const phoneNumber = "9566933355"; // Doctor's WhatsApp number
+    
+    const phoneNumber = "9566933355"; 
     const message = `*New Appointment Request*\n\n` +
       `*Name:* ${formData.firstName} ${formData.lastName}\n` +
       `*Email:* ${formData.email}\n` +
@@ -37,8 +37,7 @@ const Contact = () => {
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-    // Redirect to WhatsApp
+    
     window.location.href = whatsappUrl;
   };
 
@@ -56,8 +55,8 @@ const Contact = () => {
       color: "bg-blue-600 text-white"
     },
     {
-      title: "Clinic Phone Number",
-      details: ["+91 9360265020"],
+      title:"Clinic Contact Number", 
+      details:["+91 9360265020"],
       icon: <Phone className="w-6 h-6" />,
       color: "bg-blue-600 text-white"
     },
@@ -69,7 +68,7 @@ const Contact = () => {
     },
     {
       title: "Working Hours",
-      details: ["Mon - Sat: 9:30 AM - 9:00 PM", "Sun - Closed"],
+      details: ["Mon - Sat: 9:30 AM - 9:00 PM"],
       icon: <Clock className="w-6 h-6" />,
       color: "bg-blue-600 text-white"
     }
