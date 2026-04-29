@@ -2,9 +2,17 @@ import { ArrowRight, Waves, Activity, HeartPulse, Dumbbell, Stethoscope, Brain, 
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import img1 from '../../../assets/images/physio1.png';
-import img2 from '../../../assets/images/physio2.png';
-import img3 from '../../../assets/images/physio3.png';
+import img1 from '../../../assets/images/pain_management.jpeg';
+import img2 from '../../../assets/images/physiotherapy.jpeg';
+import img3 from '../../../assets/images/manual_therapy.jpeg';
+import img4 from "../../../assets/images/chiropractic.jpeg"
+import img5 from "../../../assets/images/sport_rehab.jpeg"
+import img6 from "../../../assets/images/robotic_spine.jpeg"
+import img7 from "../../../assets/images/laser_treatment.jpeg"
+import img8 from "../../../assets/images/post_operative.jpeg"
+import img9 from "../../../assets/images/neuro_rab.jpeg"
+import img10 from "../../../assets/images/spine_rehab.png"
+
 
 const Services = () => {
   const servicesList = [
@@ -33,49 +41,49 @@ const Services = () => {
       title: "Chiropractic",
       desc: "Specialized spinal adjustments to improve nervous system function and structural alignment.",
       icon: <Bone className="w-8 h-8" />,
-      image: img1,
+      image: img4,
       color: "bg-blue-600 text-white"
     },
     {
       title: "Sports Rehabilitation",
       desc: "Targeted recovery programs for athletes to return to their sport stronger and safer.",
       icon: <Dumbbell className="w-8 h-8" />,
-      image: img2,
+      image: img5,
       color: "bg-blue-600 text-white"
     },
     {
       title: "Robotic Spine Alignment",
       desc: "Precise, tech-driven spinal correction using state-of-the-art robotic assistance.",
       icon: <Cpu className="w-8 h-8" />,
-      image: img3,
+      image: img6,
       color: "bg-blue-600 text-white"
     },
     {
       title: "Laser Treatment",
       desc: "Non-invasive laser therapy to accelerate tissue repair and reduce inflammation.",
       icon: <Zap className="w-8 h-8" />,
-      image: img1,
+      image: img7,
       color: "bg-blue-600 text-white"
     },
     {
       title: "Post Surgery Care",
       desc: "Expert post-operative rehabilitation to ensure optimal healing and functional recovery.",
       icon: <Stethoscope className="w-8 h-8" />,
-      image: img2,
+      image: img8,
       color: "bg-blue-600 text-white"
     },
     {
       title: "Neuro Rehabilitation",
       desc: "Specialized care for neurological conditions to regain independence and motor control.",
       icon: <Brain className="w-8 h-8" />,
-      image: img3,
+      image: img9,
       color: "bg-blue-600 text-white"
     },
     {
       title: "Spine Management",
       desc: "Comprehensive approach to spinal health, addressing both acute and chronic conditions.",
       icon: <Activity className="w-8 h-8" />,
-      image: img1,
+      image: img10,
       color: "bg-blue-600 text-white"
     }
   ];
