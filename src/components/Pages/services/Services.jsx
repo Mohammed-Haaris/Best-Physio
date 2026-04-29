@@ -13,7 +13,6 @@ import img8 from "../../../assets/images/post_operative.jpeg"
 import img9 from "../../../assets/images/neuro_rab.jpeg"
 import img10 from "../../../assets/images/spine_rehab.png"
 
-
 const Services = () => {
   const servicesList = [
     {
