@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import img1 from '../../../assets/images/pain_management.jpeg';
 import img2 from '../../../assets/images/physiotherapy.jpeg';
 import img3 from '../../../assets/images/manual_therapy.jpeg';
-import img4 from "../../../assets/images/Chiropractic.jpeg"
+import img4 from "../../../assets/images/chiropractic.jpeg"
 import img5 from "../../../assets/images/sport_rehab.jpeg"
 import img6 from "../../../assets/images/robotic_spine.jpeg"
 import img7 from "../../../assets/images/laser_treatment.jpeg"
