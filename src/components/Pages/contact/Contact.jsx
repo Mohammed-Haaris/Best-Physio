@@ -25,7 +25,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    const phoneNumber = "9566933355"; // Doctor's WhatsApp number
+    const phoneNumber = "9566933355"; 
     const message = `*New Appointment Request*\n\n` +
                     `*Name:* ${formData.firstName} ${formData.lastName}\n` +
                     `*Email:* ${formData.email}\n` +
