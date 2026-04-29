@@ -24,10 +24,10 @@ const Counter = ({ target, suffix = "" }) => {
 
 const About = () => {
   const stats = [
-    { label: 'Happy Patients', value: '15k+', icon: <Users className="w-6 h-6" /> },
-    { label: 'Years Experience', value: '20+', icon: <Clock className="w-6 h-6" /> },
-    { label: 'Awards Won', value: '30+', icon: <Award className="w-6 h-6" /> },
-    { label: 'Specialized Methods', value: '40+', icon: <Activity className="w-6 h-6" /> },
+    { label: 'Happy Patients', value: 15, suffix: 'k+', icon: <Users className="w-6 h-6" /> },
+    { label: 'Years Experience', value: 20, suffix: '+', icon: <Clock className="w-6 h-6" /> },
+    { label: 'Awards Won', value: 30, suffix: '+', icon: <Award className="w-6 h-6" /> },
+    { label: 'Specialized Methods', value: 40, suffix: '+', icon: <Activity className="w-6 h-6" /> },
   ];
 
   const values = [
@@ -69,30 +69,30 @@ const About = () => {
       <div className="relative py-16 md:py-20 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src={aboutMainImg} 
-            alt="About Background" 
+          <img
+            src={aboutMainImg}
+            alt="About Background"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-blue-800/85 backdrop-blur-[2px]"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-blue-200 font-bold uppercase tracking-[0.2em] text-[10px] mb-3 block"
           >
             Our Story
           </motion.span>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight"
           >
             About <span className="text-blue-400">Us</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -130,7 +130,7 @@ const About = () => {
             >
               <span className="text-blue-600 font-bold  uppercase tracking-widest text-xs mb-2 block">Meet Our Founder</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
-               Dedicated to provide the highest standard of <span className='text-blue-600'>Pain Management</span> and <span className="text-blue-600">Physiotherapy</span>
+                Dedicated to provide the highest standard of <span className='text-blue-600'>Pain Management</span> and <span className="text-blue-600">Physiotherapy</span>
               </h2>
               <p className="text-slate-600 mb-5 text-base leading-relaxed">
                 With over 20+ years of clinical experience, <span className='text-blue-600 font-bold'>Dr. Charles Niranjan</span> has dedicated his career to helping patients overcome chronic pain and complex injuries. His approach combines traditional therapy with modern, evidence-based techniques.
@@ -140,7 +140,7 @@ const About = () => {
               </p>
 
               <div className="space-y-4 mb-10">
-                {['Gold Medalist in Neuro-Physiotherapy', 'Certified Advanced Dry Needling Specialist', 'Expert in Sports Injury Management'].map((skill, i) => (
+                {['Gold Medalist in Neuro-Physiotherapy', 'Certified Advanced Dry Needling Specialist', 'Expert in Pain Management', 'Expert in Spine Rehabilitation', 'Expert in Manual therapy especially in Disk Problems', 'Expert in Sports Injury Management'].map((skill, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <div className="bg-blue-100 p-1 rounded-full">
                       <CheckCircle className="w-5 h-5 text-blue-600" />
@@ -182,9 +182,9 @@ const About = () => {
       {/* Vision To Victory Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block bg-blue-50 text-blue-700 font-bold px-6 py-2 rounded-full mb-6 text-sm">
+          {/* <span className="inline-block bg-blue-50 text-blue-700 font-bold px-6 py-2 rounded-full mb-6 text-sm">
             Vision To Victory
-          </span>
+          </span> */}
           <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-16 tracking-tight">
             We're a <span className="text-blue-600">Recognized</span> & Quality Leader
           </h2>
@@ -232,9 +232,9 @@ const About = () => {
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, blue 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <span className="inline-block bg-white text-blue-700 font-bold px-8 py-2.5 rounded-full mb-6 text-sm shadow-sm ring-1 ring-slate-200/50">
+          {/* <span className="inline-block bg-white text-blue-700 font-bold px-8 py-2.5 rounded-full mb-6 text-sm shadow-sm ring-1 ring-slate-200/50">
             Review
-          </span>
+          </span> */}
           <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-16 tracking-tight">
             What <span className="text-black">Our Client Say</span>
           </h2>
