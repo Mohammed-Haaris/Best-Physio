@@ -62,7 +62,7 @@ const Contact = () => {
     },
     {
       title: "Email Address",
-      details: ["contact@besthealthcare.com", "support@besthealthcare.com"],
+      details: ["besthealthcare25@gmail.com"],
       icon: <Mail className="w-6 h-6" />,
       color: "bg-blue-600 text-white"
     },

@@ -1,21 +1,40 @@
 import { motion } from 'framer-motion';
-import img1 from '../../../assets/images/physio1.png';
-import img2 from '../../../assets/images/physio2.png';
-import img3 from '../../../assets/images/physio3.png';
+import img1 from '../../../assets/images/Chiropractic.jpeg';
+import img2 from '../../../assets/images/gallery_1.jpeg';
+import img3 from '../../../assets/images/laser_treatment.jpeg';
+import img4 from '../../../assets/images/manual_therapy.jpeg';
+import img5 from '../../../assets/images/neuro_rab.jpeg';
+import img6 from '../../../assets/images/pain_management.jpeg';
+import img7 from '../../../assets/images/physiotherapy.jpeg';
+import img8 from '../../../assets/images/post_operative.jpeg';
+import img9 from '../../../assets/images/robotic_spine.jpeg';
+import img10 from '../../../assets/images/spine_rehab.png';
+import img11 from '../../../assets/images/sport_rehab.jpeg';
+import img12 from '../../../assets/images/doctor_2.jpeg';
+import img13 from '../../../assets/images/doctor_3.jpeg';
+import img14 from '../../../assets/images/doctor_4.jpeg';
+import img15 from '../../../assets/images/best_post.jpeg';
+import img16 from '../../../assets/images/banner3.jpeg';
 
 const Gallery = () => {
   // Collection of high-quality physiotherapy-related placeholder images
-  // We reuse the 3 generated assets for the grid.
   const images = [
     img1,
     img2,
     img3,
-    img2,
-    img3,
-    img1,
-    img3,
-    img1,
-    img2
+    img4,
+    img5,
+    img6,
+    img7,
+    img8,
+    img9,
+    img10,
+    img11,
+    img12,
+    img13,
+    img14,
+    img15,
+    img16
   ];
 
   return (
@@ -25,7 +44,7 @@ const Gallery = () => {
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src={img3} 
+            src={img7} 
             alt="Gallery Background" 
             className="w-full h-full object-cover"
           />
