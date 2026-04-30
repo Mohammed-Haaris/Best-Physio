@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import img1 from '../../../assets/images/Chiropractic.jpeg';
+import img1 from '../../../assets/images/chiropractic.jpeg';
 import img2 from '../../../assets/images/gallery_1.jpeg';
 import img3 from '../../../assets/images/laser_treatment.jpeg';
 import img4 from '../../../assets/images/manual_therapy.jpeg';
