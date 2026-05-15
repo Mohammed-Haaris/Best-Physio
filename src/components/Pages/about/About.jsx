@@ -38,18 +38,18 @@ const About = () => {
   ];
 
   const reviews = [
-    { name: "Johan Duo", title: "Professional Athlete", img: "11", content: "Best Care Physio has completely changed my recovery game. Their modern approach is exactly what I needed!" },
-    { name: "Jane Smith", title: "Retired Teacher", img: "4", content: "The staff is so patient and professional. My back pain is gone after months of struggle." },
-    { name: "Robert Lee", title: "Construction Worker", img: "8", content: "Fast and effective treatment. I was back at work much sooner than I expected." },
-    { name: "Michael Chen", title: "Software Engineer", img: "7", content: "Ergonomics and posture correction here helped me with my repetitive strain injury." },
-    { name: "Sarah Miller", title: "Yoga Instructor", img: "2", content: "Truly human-centric care. They understand the body like no one else." },
-    { name: "David Wilson", title: "Student Athlete", img: "12", content: "Great atmosphere and highly skilled therapists. They really listen to your goals." },
-    { name: "Emily Brown", title: "Office Manager", img: "6", content: "The chronic neck pain I had for years is finally manageable. Highly recommend!" },
-    { name: "Thomas Taylor", title: "Taxi Driver", img: "3", content: "Easy to book and great results. Very professional clinic in Cuddalore." },
-    { name: "Linda Anderson", title: "Grandmother", img: "5", content: "They treated me with such kindness. I can walk to the park with my grandkids again." },
-    { name: "Kevin Garcia", title: "Fitness Enthusiast", img: "9", content: "The sports rehab here is top-notch. They have the latest equipment for recovery." },
-    { name: "Maria White", title: "Dancer", img: "10", content: "Precision and care in every session. Recovery felt like progress every single day." },
-    { name: "John Harris", title: "Businessman", img: "1", content: "Efficient, effective, and professional. The best physiotherapy experience I've had." }
+    { name: "Karthik Subramaniam", title: "Professional Athlete", img: "men/32", content: "Best Care Physio has completely changed my recovery game. Their modern approach is exactly what I needed!" },
+    { name: "Lakshmi Natarajan", title: "Retired Teacher", img: "women/44", content: "The staff is so patient and professional. My back pain is gone after months of struggle." },
+    { name: "Murugan K.", title: "Construction Worker", img: "men/46", content: "Fast and effective treatment. I was back at work much sooner than I expected." },
+    { name: "Vignesh Kumar", title: "Software Engineer", img: "men/52", content: "Ergonomics and posture correction here helped me with my repetitive strain injury." },
+    { name: "Divya Krishnan", title: "Yoga Instructor", img: "women/63", content: "Truly human-centric care. They understand the body like no one else." },
+    { name: "Ashwin Ram", title: "Student Athlete", img: "men/60", content: "Great atmosphere and highly skilled therapists. They really listen to your goals." },
+    { name: "Priya Rajan", title: "Office Manager", img: "women/71", content: "The chronic neck pain I had for years is finally manageable. Highly recommend!" },
+    { name: "Saravanan T.", title: "Taxi Driver", img: "men/72", content: "Easy to book and great results. Very professional clinic in Cuddalore." },
+    { name: "Meenakshi Iyer", title: "Grandmother", img: "women/68", content: "They treated me with such kindness. I can walk to the park with my grandkids again." },
+    { name: "Srinivasan R.", title: "Fitness Enthusiast", img: "men/75", content: "The sports rehab here is top-notch. They have the latest equipment for recovery." },
+    { name: "Anjali Menon", title: "Dancer", img: "women/82", content: "Precision and care in every session. Recovery felt like progress every single day." },
+    { name: "Ramesh Babu", title: "Businessman", img: "men/88", content: "Efficient, effective, and professional. The best physiotherapy experience I've had." }
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -57,7 +57,7 @@ const About = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 3 >= reviews.length ? 0 : prev + 3));
-    }, 2000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [reviews.length]);
 
@@ -257,7 +257,7 @@ const About = () => {
                     "{review.content}"
                   </p>
                   <div className="flex items-center gap-4 mt-auto">
-                    <img src={`https://i.pravatar.cc/100?img=${review.img}`} alt={review.name} className="w-14 h-14 rounded-full object-cover border-2 border-slate-100" />
+                    <img src={`https://randomuser.me/api/portraits/${review.img}.jpg`} alt={review.name} className="w-14 h-14 rounded-full object-cover border-2 border-slate-100" />
                     <div>
                       <h4 className="font-bold text-slate-900 text-lg">{review.name}</h4>
                       <p className="text-slate-500 text-sm font-medium">{review.title}</p>

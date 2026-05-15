@@ -21,7 +21,7 @@ const TopBar = () => {
                     </div>
                     <div className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer group">
                         <MapPin className="w-4 h-4 text-blue-500" />
-                        <span>47, Bashyam St, Cuddalore</span>
+                        <span>47, Bashyam St, Manjakuppam,Cuddalore</span>
                     </div>
                 </div>
             </div>
