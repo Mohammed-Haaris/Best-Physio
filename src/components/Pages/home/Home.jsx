@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle, Activity, UserPlus, HeartPulse, Stethoscope } 
 import { motion } from 'framer-motion';
 import { GiShoulderArmor, GiKneeCap, GiArm, GiBiceps, GiHand, GiFootprint, GiLeg, GiSpineArrow, GiPelvisBone } from "react-icons/gi";
 
-import heroImg from '../../../assets/images/physio1.png';
+import heroImg from '../../../assets/images/home_image.jpeg';
 import aboutImg from '../../../assets/images/physio3.png';
 import glassBg from '../../../assets/images/glass_bg.png';
 
