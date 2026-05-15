@@ -140,7 +140,7 @@ const About = () => {
               </p>
 
               <div className="space-y-4 mb-10">
-                {['Gold Medalist in Neuro-Physiotherapy', 'Certified Advanced Dry Needling Specialist', 'Expert in Pain Management', 'Expert in Spine Rehabilitation', 'Expert in Manual therapy especially in Disk Problems', 'Expert in Sports Injury Management'].map((skill, i) => (
+                {['Expert in Pain Management', 'Expert in Spine Rehabilitation', 'Expert in Manual therapy especially in Disk Problems', 'Expert in Sports Injury Management'].map((skill, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <div className="bg-blue-100 p-1 rounded-full">
                       <CheckCircle className="w-5 h-5 text-blue-600" />

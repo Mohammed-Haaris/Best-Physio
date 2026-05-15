@@ -14,7 +14,7 @@ import img12 from '../../../assets/images/doctor_2.jpeg';
 import img13 from '../../../assets/images/doctor_3.jpeg';
 import img14 from '../../../assets/images/doctor_4.jpeg';
 import img15 from '../../../assets/images/best_post.jpeg';
-import img16 from '../../../assets/images/banner3.jpeg';
+// import img16 from '../../../assets/images/banner3.jpeg';
 
 const Gallery = () => {
   // Collection of high-quality physiotherapy-related placeholder images
@@ -34,7 +34,7 @@ const Gallery = () => {
     img13,
     img14,
     img15,
-    img16
+    // img16
   ];
 
   return (
@@ -43,9 +43,9 @@ const Gallery = () => {
       <div className="relative py-16 md:py-20 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src={img7} 
-            alt="Gallery Background" 
+          <img
+            src={img7}
+            alt="Gallery Background"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-blue-800/85 backdrop-blur-[2px]"></div>
