@@ -51,7 +51,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-600 font-medium">
                 <MapPin className="h-6 w-6 text-primary shrink-0" />
-                <span className="leading-relaxed">47, Bashyam St, near pillaiyar koil,<br />North Venugopalapuram, Allpettai,<br />Cuddalore, Tamil Nadu 607001</span>
+                <span className="leading-relaxed">47, Bashyam St, Manjakuppam,<br /> Near Udhaya Scans and Hema Medicals,<br />Cuddalore, Tamil Nadu 607001</span>
               </li>
               <li className="flex items-center gap-3 text-gray-600 font-medium">
                 <Phone className="h-5 w-5 text-primary shrink-0" />

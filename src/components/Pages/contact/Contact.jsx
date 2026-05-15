@@ -44,7 +44,7 @@ const Contact = () => {
   const contactInfo = [
     {
       title: "Our Location",
-      details: ["47, Bashyam St, near pillaiyar koil,", "North Venugopalapuram, Allpettai,", "Manjakuppam, Cuddalore,", "Tamil Nadu 607001"],
+      details: ["47, Bashyam St, Manjakuppam,", "Near Udhaya scans and Hema medicals,", "Allpettai, Cuddalore,", "Tamil Nadu 607001"],
       icon: <MapPin className="w-6 h-6" />,
       color: "bg-blue-600 text-white"
     },
@@ -141,7 +141,7 @@ const Contact = () => {
         >
           <div className="p-3 md:p-5 bg-gradient-to-br from-blue-500 to-blue-700 rounded-[2.5rem] shadow-2xl shadow-blue-600/30">
             <div className="w-full py-12 md:py-20 rounded-[1.8rem] overflow-hidden bg-white flex flex-col items-center justify-center translate-z-0">
-               <div className="group relative p-2 bg-white transition-all duration-500 hover:scale-105">
+              <div className="group relative p-2 bg-white transition-all duration-500 hover:scale-105">
                 <img
                   src={googleQR}
                   alt="Google Maps QR Code"

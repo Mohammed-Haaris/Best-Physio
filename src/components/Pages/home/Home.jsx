@@ -110,8 +110,8 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: UserPlus, title: "Expert Therapists", desc: "Our team of certified professionals is dedicated to your health." },
-              { icon: HeartPulse, title: "Personalized Care", desc: "Treatment plans tailored specifically to your unique needs and goals." },
+              { icon: UserPlus, title: "Expert Doctors", desc: "Our team of certified professionals is dedicated to your health." },
+              { icon: HeartPulse, title: "Specialized Treatment Method", desc: "Treatment plans tailored specifically to your unique needs and goals." },
               { icon: Stethoscope, title: "Modern Facilities", desc: "Equipped with state-of-the-art technology for advanced treatment." }
             ].map((feature, idx) => (
               <motion.div
