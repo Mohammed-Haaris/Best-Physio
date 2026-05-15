@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Activity, UserPlus, HeartPulse, Stethoscope } from 'lucide-react';
+import { ArrowRight, CheckCircle, Activity, UserPlus, HeartPulse, Stethoscope, Brain } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { GiShoulderArmor, GiKneeCap, GiArm, GiBiceps, GiHand, GiFootprint, GiLeg, GiSpineArrow, GiPelvisBone } from "react-icons/gi";
 
@@ -149,23 +149,23 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6">
             {[
-              { name: "Neck Pain", icon: <GiSpineArrow /> },
-              { name: "Shoulder Pain", icon: <GiShoulderArmor /> },
-              { name: "Hip Pain", icon: <GiPelvisBone /> },
-              { name: "Knee Pain", icon: <GiKneeCap /> },
-              { name: "Elbow Pain", icon: <GiArm /> },
-              { name: "Tricep Pain", icon: <GiBiceps /> },
-              { name: "Hand Pain", icon: <GiHand /> },
-              { name: "Foot Pain", icon: <GiFootprint /> },
-              { name: "Ankle Pain", icon: <GiLeg /> }
-            ].map((pain, idx) => (
-              <div key={idx} className="flex items-center gap-5 py-6 border-b border-blue-900/10 group cursor-pointer hover:border-blue-600 transition-colors">
-                <div className="w-12 h-12 flex items-center justify-center text-blue-600 bg-white rounded-2xl shadow-sm group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all text-3xl">
-                  {pain.icon}
+              { title: "ORTHO PROBLEMS", desc: "Like bone and joint injuries.", icon: <GiShoulderArmor /> },
+              { title: "NEURO PROBLEMS", desc: "Like muscle Paralysis and Neuropathy issues.", icon: <Activity /> },
+              { title: "SPINE PROBLEMS", desc: "Like Disc bulging, Sciatica and other disc diseases.", icon: <GiSpineArrow /> },
+              { title: "SPORTS INJURIES", desc: "Like joint swellings and ligament issues.", icon: <GiKneeCap /> },
+              { title: "PAIN MANAGEMENT", desc: "All types of pains like Neck, back, shoulder, Elbow, wrist, hip, knee and ankle pains.", icon: <HeartPulse /> },
+              { title: "PSYCHOLOGICAL PROBLEMS", desc: "Due to chronic, uncured health issues and mental stress.", icon: <Brain /> }
+            ].map((problem, idx) => (
+              <div key={idx} className="flex flex-col gap-2 py-6 border-b border-blue-900/10 group cursor-pointer hover:border-blue-600 transition-colors">
+                <div className="flex items-center gap-5">
+                  <div className="w-12 h-12 flex items-center justify-center text-blue-600 bg-white rounded-2xl shadow-sm group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all text-3xl shrink-0">
+                    {problem.icon}
+                  </div>
+                  <h3 className="text-slate-800 font-bold text-lg group-hover:text-blue-700 transition-colors leading-tight">{problem.title}</h3>
                 </div>
-                <span className="text-slate-800 font-bold text-xl group-hover:text-blue-700 transition-colors">{pain.name}</span>
+                <p className="text-slate-500 text-[15px] font-medium pl-[68px] group-hover:text-slate-700 transition-colors">{problem.desc}</p>
               </div>
             ))}
           </div>
